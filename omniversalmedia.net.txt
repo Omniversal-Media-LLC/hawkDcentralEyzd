@@ -1,0 +1,71 @@
+;;
+;; Domain:     omniversalmedia.net.
+;; Exported:   2024-07-31 14:50:48
+;;
+;; This file is intended for use for informational and archival
+;; purposes ONLY and MUST be edited before use on a production
+;; DNS server.  In particular, you must:
+;;   -- update the SOA record with the correct authoritative name server
+;;   -- update the SOA record with the contact e-mail address information
+;;   -- update the NS record(s) with the authoritative name servers for this domain.
+;;
+;; For further information, please consult the BIND documentation
+;; located on the following website:
+;;
+;; http://www.isc.org/
+;;
+;; And RFC 1035:
+;;
+;; http://www.ietf.org/rfc/rfc1035.txt
+;;
+;; Please note that we do NOT offer technical support for any use
+;; of this zone data, the BIND name server, or any other third-party
+;; DNS software.
+;;
+;; Use at your own risk.
+;; SOA Record
+omniversalmedia.net	3600	IN	SOA	devin.ns.cloudflare.com. dns.cloudflare.com. 2047410404 10000 2400 604800 3600
+
+;; NS Records
+omniversalmedia.net.	86400	IN	NS	devin.ns.cloudflare.com.
+omniversalmedia.net.	86400	IN	NS	ziggy.ns.cloudflare.com.
+
+;; A Records
+autoconfig.omniversalmedia.net.	1	IN	A	198.54.126.65
+autodiscover.omniversalmedia.net.	1	IN	A	198.54.126.65
+cpanel.omniversalmedia.net.	1	IN	A	198.54.126.65
+cpcalendars.omniversalmedia.net.	1	IN	A	198.54.126.65
+cpcontacts.omniversalmedia.net.	1	IN	A	198.54.126.65
+ftp.omniversalmedia.net.	1	IN	A	198.54.126.65
+mail.omniversalmedia.net.	1	IN	A	198.54.126.65
+omniversalmedia.net.	1	IN	A	198.54.126.65
+webdisk.omniversalmedia.net.	1	IN	A	198.54.126.65
+webmail.omniversalmedia.net.	1	IN	A	198.54.126.65
+whm.omniversalmedia.net.	1	IN	A	198.54.126.65
+
+;; CNAME Records
+live.omniversalmedia.net.	1	IN	CNAME	hawkeyetherapper.pages.dev.
+team.omniversalmedia.net.	1	IN	CNAME	public.r2.dev.
+test.omniversalmedia.net.	1	IN	CNAME	omnirein.pages.dev.
+www.omniversalmedia.net.	1	IN	CNAME	omniversalmedia.net.
+
+;; MX Records
+omniversalmedia.net.	1	IN	MX	20 mx3-hosting.jellyfish.systems.
+omniversalmedia.net.	1	IN	MX	10 mx2-hosting.jellyfish.systems.
+omniversalmedia.net.	1	IN	MX	5 mx1-hosting.jellyfish.systems.
+
+;; SRV Records
+_autodiscover._tcp.omniversalmedia.net.	1	IN	SRV	0 0 443 cpanelemaildiscovery.cpanel.net.
+_caldavs._tcp.omniversalmedia.net.	1	IN	SRV	0 0 2080 host15.registrar-servers.com.
+_caldav._tcp.omniversalmedia.net.	1	IN	SRV	0 0 2079 host15.registrar-servers.com.
+_carddavs._tcp.omniversalmedia.net.	1	IN	SRV	0 0 2080 host15.registrar-servers.com.
+_carddav._tcp.omniversalmedia.net.	1	IN	SRV	0 0 2079 host15.registrar-servers.com.
+
+;; TXT Records
+_caldavs._tcp.omniversalmedia.net.	1	IN	TXT	"path=/"
+_caldav._tcp.omniversalmedia.net.	1	IN	TXT	"path=/"
+_carddavs._tcp.omniversalmedia.net.	1	IN	TXT	"path=/"
+_carddav._tcp.omniversalmedia.net.	1	IN	TXT	"path=/"
+default._domainkey.omniversalmedia.net.	1	IN	TXT	"v=DKIM1; k=rsa; p=MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEA7UQ4MBkLMNa19bnx2V4jHchyDMY+7Gtr48f/IHzg9wPcjB92X7tHctCBqSiC8QQfkkvj2jmlz9K7lx4Bi63OSnEds+e7txwg56+C2NqD6TpewW/SkPEjCplf1L1XvuOMbJShFIbY/tA8mJedQ+kizogZh0mgg1wU4Rzkt4ACs7FBEdfuNk4ciLgurSMSXdxq0" "zFV54ngYoCGT6iW7/vq6jKbjCULzM4uKo53NIR3W73CIt+R+Uy/pvLmab7sbvrMEmEQ3wZg1e0tlUAgiQNnWMyIMgTnxJlGuSS5eYS6DXF052YXpnBAraiB8fgNUStXK3ID1qqnAQWyDqzZIHryfQIDAQAB;"
+_dmarc.omniversalmedia.net.	1	IN	TXT	"v=DMARC1;  p=none; rua=mailto:678d8316fe8f4afc8007f69568868d77@dmarc-reports.cloudflare.net"
+omniversalmedia.net.	1	IN	TXT	"v=spf1 ip4:198.54.126.62 ip4:198.54.126.63 include:spf.web-hosting.com +a +mx ~all"
